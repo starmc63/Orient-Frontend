@@ -15,6 +15,6 @@
     height: 10%;
     color: white;
     font-size: large;
-    background-color: black;
+    background-color: #07172e;
 }
 </style>
