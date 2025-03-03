@@ -3,10 +3,10 @@
         <Filter></Filter>
         <!-- <div style="width: 100%;height: 30vh;background-color: red;"></div> -->
         <div class="content">
-            <div style="width: 100%;height: 130vh;background-color: red;"></div>
+
         </div>
 
-        <Footer></Footer>
+        <!-- <Footer></Footer> -->
     </div>
 </template>
 <script lang="ts" setup>
@@ -28,7 +28,7 @@ import Footer from './Footer/index.vue';
 
     /* 让容器至少和视口一样高 */
     .content {
-        flex: 1;
+        // flex: 1;
     }
 
 }
