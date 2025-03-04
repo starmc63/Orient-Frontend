@@ -1,7 +1,8 @@
 <template>
     <div class="left">
-        <el-icon size="20px">
-            <Fold></Fold>
+        <el-icon size="20px" @click="foldSilder">
+            <Fold v-if="!isFold"></Fold>
+            <Expand v-else></Expand>
         </el-icon>
         <div class="address">
             <el-icon>
@@ -23,7 +24,10 @@
     </div>
 </template>
 <script lang="ts" setup>
-
+import { useSilderStore } from '@/stores/silder';
+import { storeToRefs } from 'pinia';
+const {isFold}=storeToRefs(useSilderStore());
+const {foldSilder}=useSilderStore();
 </script>
 <style lang="scss">
 .left {

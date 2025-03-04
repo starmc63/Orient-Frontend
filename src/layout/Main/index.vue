@@ -3,7 +3,11 @@
         <Filter></Filter>
         <!-- <div style="width: 100%;height: 30vh;background-color: red;"></div> -->
         <div class="content">
-
+             <Card/>
+             <Card/>
+             <Card/>
+             <Card/>
+             <Card/>
         </div>
 
         <!-- <Footer></Footer> -->
@@ -16,7 +20,7 @@ import Footer from './Footer/index.vue';
 .main {
     position: relative;
     width: 100%;
-
+    
     height: calc(100vh - $header-height);
     // overflow: auto;
     overflow-x: hidden;
@@ -29,6 +33,10 @@ import Footer from './Footer/index.vue';
     /* 让容器至少和视口一样高 */
     .content {
         // flex: 1;
+        padding: 20px;
+        display: grid;
+        grid-template-columns: repeat(3,32%);
+        gap: 30px;
     }
 
 }

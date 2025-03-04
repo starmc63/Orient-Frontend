@@ -1,7 +1,7 @@
 <template>
     <div class="common-layout">
         <el-container>
-            <el-aside width="200px">
+            <el-aside :class="isFold?'hidden':''">
                 <Silder></Silder>
             </el-aside>
             <el-container>
@@ -22,6 +22,9 @@
 import Silder from './Silder/index.vue';
 import Header from './Header/index.vue';
 import Main from './Main/index.vue';
+import { useSilderStore } from '@/stores/silder';
+import { storeToRefs } from 'pinia';
+const {isFold}=storeToRefs(useSilderStore());
 </script>
 <style lang="scss">
 .common-layout {
@@ -43,6 +46,17 @@ import Main from './Main/index.vue';
         overflow-y: auto;
         // display: block;
 
+    }
+
+    aside {
+        width: 200px;
+        // width: 50px;
+        transition: width 0.1s ease;
+
+    }
+
+    .hidden {
+        width: 50px;
     }
 }
 </style>
