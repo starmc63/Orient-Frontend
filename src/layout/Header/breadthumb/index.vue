@@ -1,6 +1,6 @@
 <template>
     <div class="left">
-        <el-icon size="20px" @click="foldSilder">
+        <el-icon size="20px" @click="foldSilder" class="foldIcon">
             <Fold v-if="!isFold"></Fold>
             <Expand v-else></Expand>
         </el-icon>
@@ -29,13 +29,17 @@ import { storeToRefs } from 'pinia';
 const {isFold}=storeToRefs(useSilderStore());
 const {foldSilder}=useSilderStore();
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 .left {
     height: $header-height;
     padding-left: 10px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
+
+    .foldIcon:hover{
+        cursor: pointer;
+    }
 
     .address {
         display: flex;

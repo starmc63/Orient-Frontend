@@ -126,6 +126,11 @@ const foldFilter=()=>{
         &.hidden{
             left: 42%;
         }
+        
+    }
+
+    .foldBtn:hover{
+        cursor: pointer;
     }
 
     .filter-form {
