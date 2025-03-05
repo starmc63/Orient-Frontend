@@ -1,6 +1,6 @@
 <template>
     <div class="container-login">
-        <div class="login-form"  v-show="scence == 1">
+        <div class="login-form" v-show="scence == 1">
             <el-card class="box-card" size="large">
                 <el-row>
                     <el-col align="center" style="font-size: x-large;height: 10vh;">
@@ -32,7 +32,7 @@
             </el-card>
 
         </div>
-        <div class="register-form"  v-show="scence == 2">
+        <div class="register-form" v-show="scence == 2">
             <el-card class="box-card" size="large">
                 <el-row>
                     <el-col align="center" style="font-size: x-large;height: 6vh;">
@@ -40,24 +40,24 @@
                     </el-col>
                 </el-row>
                 <el-row>
-                    <el-form label-position="top">
+                    <el-form label-position="top" style="width: 100%;">
                         <el-form-item label="用户名" required>
-                            <el-input ></el-input>
+                            <el-input></el-input>
                         </el-form-item>
                         <el-form-item label="手机号" required>
-                            <el-input ></el-input>
+                            <el-input></el-input>
                         </el-form-item>
                         <el-form-item label="密码" required>
-                            <el-input ></el-input>
+                            <el-input></el-input>
                         </el-form-item>
                         <el-form-item label="确认密码" required>
-                            <el-input ></el-input>
+                            <el-input></el-input>
                         </el-form-item>
-                        <el-form-item label="身份证号码" required> 
-                            <el-input ></el-input>
+                        <el-form-item label="身份证号码" required>
+                            <el-input></el-input>
                         </el-form-item>
                         <el-form-item label="统一社会信用代码">
-                            <el-input ></el-input>
+                            <el-input></el-input>
                         </el-form-item>
                     </el-form>
                 </el-row>
@@ -73,28 +73,6 @@
                         </el-button>
                     </el-col>
                 </el-row>
-                <!-- <el-row>
-                    <el-col align="center" style="height: 10vh;">
-                        <el-input placeholder="用户名"></el-input>
-                    </el-col>
-                </el-row>
-                <el-row>
-                    <el-col align="center" style="height: 10vh;">
-                        <el-input placeholder="密码" type="password" v-model="password"></el-input>
-                    </el-col>
-                </el-row>
-                <el-row>
-                    <el-col :span="12" align="start">
-                        <el-button type="primary" style="width: 90%;" @click="submitHandler">
-                            提交
-                        </el-button>
-                    </el-col>
-                    <el-col :span="12" align="end">
-                        <el-button type="primary" style="width: 90%;" @click="backHandler">
-                            返回
-                        </el-button>
-                    </el-col>
-                </el-row> -->
             </el-card>
         </div>
     </div>
@@ -147,15 +125,15 @@ const backHandler = () => {
 
     .register-form {
         width: 20vw;
-        height: 90%;
+        height: 85%;
         flex: 1;
         display: flex;
         justify-content: center;
+
         .box-card {
-            width: 20vw;
-            .el-form-item{
-                width: 100%;
-            }
+            width: 30vw;
+
+
         }
     }
 }
