@@ -1,7 +1,7 @@
 <template>
     <div class="common-layout">
         <el-container>
-            <el-aside :class="isFold?'hidden':''">
+            <el-aside :class="isFold ? 'hidden' : ''">
                 <Silder></Silder>
             </el-aside>
             <el-container>
@@ -24,7 +24,7 @@ import Header from './Header/index.vue';
 import Main from './Main/index.vue';
 import { useSilderStore } from '@/stores/silder';
 import { storeToRefs } from 'pinia';
-const {isFold}=storeToRefs(useSilderStore());
+const { isFold } = storeToRefs(useSilderStore());
 </script>
 <style lang="scss">
 .common-layout {

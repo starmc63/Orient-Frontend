@@ -18,7 +18,8 @@
     border-style: solid;
     border-color: rgba(0, 0, 0, 0.1);
     color: rgba(0, 0, 0, 0.1);
-    // position: absolute;
-    // bottom: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
 }
 </style>
