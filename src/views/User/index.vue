@@ -1,48 +1,123 @@
 <template>
     <div class="user-content">
-        <el-card class="card-box">
-            <!-- <div style="width: 100%;height: 30vh;background-color: red;"></div> -->
-            <el-row>
-                <el-col :span="5" align="center">
-                    <el-avatar :size="150" src=""></el-avatar>
-                </el-col>
-                <el-col :span="19">
-                    <!-- <div style="width: 100%;height: 100%;background-color: red;"></div> -->
+        <el-row>
+            <el-col :span="2">
+
+            </el-col>
+            <el-col :span="6" style="margin-right: 15px;">
+                <el-card class="card-box" style="border-radius: 10px;">
+                    <!-- <div style="width: 100%;height: 30vh;background-color: red;"></div> -->
                     <el-row>
-                        <span class="user-name">Title</span>
+                        <el-col align="center">
+                            <el-avatar :size="100" src=""></el-avatar>
+                        </el-col>
                     </el-row>
+                    <el-row style="margin-top: 20px;">
+                        <el-col :span="14" align="end" class="user-name">
+                            <span style="margin-right: 10px;">XXXX</span>
+                        </el-col>
+                        <el-col :span="10" align="start" class="oneline-tag">
+                            <el-tag round effect="light" type="success">•在线</el-tag>
+                        </el-col>
+                    </el-row>
+                    <el-row style="margin-top: 30px;">
+                        <el-col align="center" class="user-sign">
+                            <span>这个人很懒，还没有签名...</span>
+                        </el-col>
+                    </el-row>
+                    <el-divider></el-divider>
+                    <el-row :gutter="7">
+                        <el-col :span="12" class="task-finished">
+                            <el-card :body-style="{ padding: '20px' }" style="border-radius: 7px;box-shadow: none;">
+                                <div class="task-content">
+                                    <div class="number">
+                                        20
+                                    </div>
+                                    <span>已完成任务</span>
+                                </div>
+                            </el-card>
+                        </el-col>
+                        <el-col :span="12" class="task-working">
+                            <el-card :body-style="{ padding: '20px' }" style="border-radius: 7px;box-shadow: none;">
+                                <div class="task-content">
+                                    <div class="number">
+                                        18
+                                    </div>
+                                    <span>进行中任务</span>
+                                </div>
+                            </el-card>
+                        </el-col>
+                    </el-row>
+                    <el-divider></el-divider>
                     <el-row>
-                        <span class="user-sign">XXXXXXX</span>
+                        <el-card :body-style="{ padding: '10px' }"
+                            style="border-radius: 7px;box-shadow: none;width: 100%;">
+                            <el-col class="user-email">
+                                <div class="email-icon">
+                                    <el-icon color="#000000" class="inherit" style="color: black;">
+                                        <Message />
+                                    </el-icon>
+                                </div>
+                                <div class="email-text">
+                                    <span>921036503@qq.com</span>
+                                </div>
+                            </el-col>
+                        </el-card>
                     </el-row>
-                    <el-row class="user-info">
-                        <div class="info-item">
-                            <el-icon>
-                                <Location color="black" />
-                            </el-icon>
-                            上海
-                        </div>
-                        <div class="info-item">
-                            <el-icon>
-                                <Iphone />
-                            </el-icon>
-                            137-2001-0023
-                        </div>
-                        <div class="info-item">
-                            <el-icon>
-                                <Message />
-                            </el-icon>
-                            xxxxx@gmail.com
-                        </div>
-                        <div class="info-item">
-                            qianduan
-                        </div>
-                        <div class="info-item">
-                            qianduan
-                        </div>
+                    <el-row style="margin-top: 8px;">
+                        <el-card :body-style="{ padding: '10px' }"
+                            style="border-radius: 7px;box-shadow: none;width: 100%;">
+                            <el-col class="user-qq">
+                                <div class="qq-icon">
+                                    <el-icon color="#000000" class="inherit" style="color: black;">
+                                        <Paperclip />
+                                    </el-icon>
+                                </div>
+                                <div class="qq-text">
+                                    <span>921036503</span>
+                                </div>
+                            </el-col>
+                        </el-card>
                     </el-row>
-                </el-col>
-            </el-row>
-        </el-card>
+                </el-card>
+            </el-col>
+            <el-col :span="14">
+                <el-row>
+                    <el-col>
+                        <el-card style="width: 100%;border: 5px;border-radius: 10px;" :body-style="{ padding: '15px' }">
+                            <div class="back-home">
+                                <div class="home-icon">
+                                    <el-icon>
+                                        <House />
+                                    </el-icon>
+                                </div>
+                                <div class="home-text">
+                                    返回主页
+                                </div>
+                            </div>
+                        </el-card>
+                    </el-col>
+                </el-row>
+                <el-row style="margin-top: 15px;">
+                    <el-col>
+                        <el-card style="width: 100%;border: 5px;border-radius: 10px;" :body-style="{ padding: '15px' }">
+                            <el-row style="margin-top: 20px;">
+                                <el-col>
+                                    <span style="font-size: large;font-weight: bold;">技能等级 </span>
+                                </el-col>
+                            </el-row>
+                            <el-row>
+
+                            </el-row>
+                        </el-card>
+                    </el-col>
+                </el-row>
+            </el-col>
+            <el-col :span="2">
+
+            </el-col>
+        </el-row>
+
     </div>
 </template>
 <script lang="ts" setup>
@@ -56,39 +131,104 @@ import { Iphone, Location, Message } from '@element-plus/icons-vue';
 
     .card-box {
         width: 100%;
-        border-radius: 20px;
+        // border-radius: 20px;
+
+        .card-content {
+            display: flex;
+            justify-content: center;
+
+        }
 
         .user-name {
 
-            // font-style: bold;
+            font-style: bold;
+            font-size: large;
             font-weight: bold;
-            font-size: xx-large;
-            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: end;
         }
 
         .user-sign {
-            font-size: large;
-            margin-bottom: 25px;
+            font-size: small;
+            color: rgb(197, 201, 203);
+        }
+
+        .task-finished {
+            .task-content {
+                display: flex;
+                justify-content: center;
+                align-items: end;
+
+                .number {
+                    color: purple;
+                    font-size: x-large;
+                    margin-right: 2px;
+                }
+
+                span {
+                    font-size: x-small;
+                }
+            }
 
 
         }
 
-        .user-info {
-            display: flex;
-            align-items: center;
-            justify-content: start;
+        .task-working {
+            .task-content {
+                display: flex;
+                justify-content: center;
+                align-items: end;
 
-            .info-item {
-                flex: 0 1 20%;
-                border-radius: 10px;
-                background-color: aliceblue;
-                height: 20%;
-                padding: 15px;
-                // margin: 5px 5px;
-                margin-bottom: 10px;
-                margin-right: 10px;
+                .number {
+                    color: purple;
+                    font-size: x-large;
+                    margin-right: 2px;
+                }
+
+                span {
+                    font-size: x-small;
+                }
             }
         }
+
+        .user-email {
+            display: flex;
+            align-items: center;
+
+            .email-icon {
+                // color: black;
+                margin-right: 5px;
+            }
+
+            .email-text {}
+        }
+
+        .user-qq {
+            display: flex;
+            align-items: center;
+
+            .qq-icon {
+                // color: black;
+                margin-right: 5px;
+            }
+
+            .qq-text {}
+        }
+
+
+
+    }
+
+    .back-home {
+        display: flex;
+        justify-content: start;
+
+        .home-icon {
+            margin-right: 5px;
+        }
+
+        .home-text {}
     }
 }
 </style>
