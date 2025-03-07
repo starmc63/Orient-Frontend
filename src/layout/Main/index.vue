@@ -1,8 +1,13 @@
 <template>
     <div class="main">
         <div class="main-grid">
-            <router-view></router-view>
-            <Footer></Footer>
+            <div class="cards">
+                <router-view></router-view>
+            </div>
+            <div class="footer">
+                <Footer></Footer>
+            </div>
+
         </div>
 
         <!-- <div class="main-footer">
@@ -27,6 +32,16 @@ import Footer from './Footer/index.vue';
         display: flex;
         flex-direction: column;
         min-height: calc(100vh - $header-height);
+
+        .cards {
+            min-height: calc(89vh - $header-height);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .footer {
+            flex-shrink: 0;
+        }
     }
 
     .main-footer {

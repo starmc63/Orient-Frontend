@@ -18,9 +18,9 @@
     border-style: solid;
     border-color: rgba(0, 0, 0, 0.1);
     color: rgba(0, 0, 0, 0.1);
-    position: absolute;
-    bottom: 0px;
-    transform: translateY(100%);
-    left: 0;
+    // position: absolute;
+    // bottom: 0px;
+    // transform: translateY(100%);
+    // left: 0;
 }
 </style>

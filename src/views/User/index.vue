@@ -106,8 +106,22 @@
                                     <span style="font-size: large;font-weight: bold;">技能等级 </span>
                                 </el-col>
                             </el-row>
-                            <el-row>
+                            <el-row style="width: 100%;">
+                                <el-col>
+                                    <div class="skill-content">
+                                        <SkillItem skill-name="机器学习" :skill-level="10" skill-process="80%"
+                                            skill-icon="ML" />
+                                        <div class="skill-item">
 
+                                        </div>
+                                        <div class="skill-item">
+
+                                        </div>
+                                        <div class="skill-item">
+
+                                        </div>
+                                    </div>
+                                </el-col>
                             </el-row>
                         </el-card>
                     </el-col>
@@ -122,7 +136,7 @@
 </template>
 <script lang="ts" setup>
 import { Iphone, Location, Message } from '@element-plus/icons-vue';
-
+import SkillItem from './SkillItem/index.vue';
 
 </script>
 <style lang="scss" scoped>
@@ -229,6 +243,35 @@ import { Iphone, Location, Message } from '@element-plus/icons-vue';
         }
 
         .home-text {}
+    }
+
+    .skill-content {
+        display: grid;
+        width: 100%;
+        margin-top: 20px;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 10px;
+
+        .skill-item {
+
+            display: flex;
+            // flex: 0 0 230px;
+            height: 80px;
+            background-color: aliceblue;
+            border-radius: 10px;
+
+            .item-icon {
+                height: 50%;
+                align-self: center;
+                aspect-ratio: 1/1;
+                border-radius: 8px;
+                background-color: aquamarine;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+
     }
 }
 </style>

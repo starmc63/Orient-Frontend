@@ -21,9 +21,10 @@
 .content {
     // flex: 1;
     // height: 100%;
+    // width: 100%;
     padding: 20px;
     display: grid;
-    grid-template-columns: repeat(3, 32%);
+    grid-template-columns: minmax(330px, 1fr) minmax(330px, 1fr) minmax(330px, 1fr);
     gap: 30px;
 }
 </style>

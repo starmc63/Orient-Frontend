@@ -30,6 +30,7 @@ const { isFold } = storeToRefs(useSilderStore());
 .common-layout {
     // overflow: hidden;
     overflow-y: hidden;
+    overflow-x: auto;
     width: 100%;
     height: 100vh;
 
@@ -44,6 +45,8 @@ const { isFold } = storeToRefs(useSilderStore());
     main {
         padding: 0;
         overflow-y: auto;
+        // width: 100%;
+        // overflow-x: auto;
         // display: block;
 
     }
