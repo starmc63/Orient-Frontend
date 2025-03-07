@@ -2,10 +2,12 @@
     <div class="main">
         <div class="main-grid">
             <router-view></router-view>
-        </div>
-        <div class="main-footer">
             <Footer></Footer>
         </div>
+
+        <!-- <div class="main-footer">
+            
+        </div> -->
     </div>
 </template>
 <script lang="ts" setup>
@@ -15,15 +17,21 @@ import Footer from './Footer/index.vue';
 .main {
     position: relative;
     overflow-y: auto;
-    display: flex;
-    min-height: calc(100vh - $header-height);
+    // display: flex;
+    // flex-direction: column;
+    height: calc(100vh - $header-height);
 
     .main-grid {
-        flex: 1;
+        // flex-shrink: 0;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        min-height: calc(100vh - $header-height);
     }
 
     .main-footer {
-        flex: 0 0 0;
+        // position: relative;
+        // flex: 0 0 0;
     }
 }
 </style>
