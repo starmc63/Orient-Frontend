@@ -9,7 +9,7 @@
                     <!-- <div style="width: 100%;height: 30vh;background-color: red;"></div> -->
                     <el-row>
                         <el-col align="center">
-                            <el-avatar :size="100" src=""></el-avatar>
+                            <el-avatar :size="100"></el-avatar>
                         </el-col>
                     </el-row>
                     <el-row style="margin-top: 20px;">
@@ -84,7 +84,8 @@
             <el-col :span="14">
                 <el-row>
                     <el-col>
-                        <el-card style="width: 100%;border: 5px;border-radius: 10px;" :body-style="{ padding: '15px' }">
+                        <el-card style="width: 100%;border: 5px;border-radius: 10px;" :body-style="{ padding: '15px' }"
+                            class="home-card">
                             <div class="back-home">
                                 <div class="home-icon">
                                     <el-icon>
@@ -109,17 +110,15 @@
                             <el-row style="width: 100%;">
                                 <el-col>
                                     <div class="skill-content">
-                                        <SkillItem skill-name="机器学习" :skill-level="10" skill-process="80%"
+                                        <SkillItem skill-name="机器学习" :skill-level="10" :skill-process="80"
                                             skill-icon="ML" />
-                                        <div class="skill-item">
+                                        <SkillItem skill-name="前端开发" :skill-level="17" :skill-process="32"
+                                            skill-icon="Fronted" />
+                                        <SkillItem skill-name="跨平台开发" :skill-level="2" :skill-process="40"
+                                            skill-icon="Phone" />
+                                        <SkillItem skill-name="服务器开发" :skill-level="1" :skill-process="11"
+                                            skill-icon="Server" />
 
-                                        </div>
-                                        <div class="skill-item">
-
-                                        </div>
-                                        <div class="skill-item">
-
-                                        </div>
                                     </div>
                                 </el-col>
                             </el-row>
@@ -234,16 +233,27 @@ import SkillItem from './SkillItem/index.vue';
 
     }
 
-    .back-home {
-        display: flex;
-        justify-content: start;
+    .home-card {
+        .back-home {
+            display: flex;
+            justify-content: start;
 
-        .home-icon {
-            margin-right: 5px;
+            .home-icon {
+                margin-right: 5px;
+            }
+
+            .home-text {}
+
+
         }
-
-        .home-text {}
     }
+
+    .home-card:hover {
+        background-color: rgb(135, 134, 144);
+        cursor: pointer;
+    }
+
+
 
     .skill-content {
         display: grid;
@@ -252,25 +262,6 @@ import SkillItem from './SkillItem/index.vue';
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
         gap: 10px;
 
-        .skill-item {
-
-            display: flex;
-            // flex: 0 0 230px;
-            height: 80px;
-            background-color: aliceblue;
-            border-radius: 10px;
-
-            .item-icon {
-                height: 50%;
-                align-self: center;
-                aspect-ratio: 1/1;
-                border-radius: 8px;
-                background-color: aquamarine;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
-        }
 
     }
 }

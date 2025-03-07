@@ -12,7 +12,15 @@
             </el-col>
             <el-col :span="18">
                 <div class="item-content">
-
+                    <div class="skill-name">
+                        {{ skillName }}
+                    </div>
+                    <div class="skill-progress">
+                        <el-progress :percentage="skillProcess" :show-text="false"></el-progress>
+                    </div>
+                    <div class="skill-level">
+                        Lv.{{ skillLevel }}
+                    </div>
                 </div>
             </el-col>
         </el-row>
@@ -23,7 +31,7 @@ defineProps<{
     skillName: string,
     skillIcon: string,
     skillLevel: number,
-    skillProcess: string
+    skillProcess: number
 }>();
 </script>
 <style lang="scss" scoped>
@@ -32,7 +40,7 @@ defineProps<{
     display: flex;
     // flex: 0 0 230px;
     height: 80px;
-    background-color: aliceblue;
+    background-color: rgb(190, 198, 202);
     border-radius: 10px;
 
     .item-icon {
@@ -40,10 +48,33 @@ defineProps<{
         align-self: center;
         aspect-ratio: 1/1;
         border-radius: 8px;
-        background-color: aquamarine;
+        background-color: rgb(213, 228, 223);
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+
+    .item-content {
+        padding: 10px 0;
+        // display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: start;
+
+        .skill-name {
+            font-size: medium;
+            font-weight: bold;
+        }
+
+        .skill-progress {
+            width: 50%;
+            margin-top: 10px;
+        }
+
+        .skill-level {
+            margin-top: 10px;
+            font-size: x-small;
+        }
     }
 }
 </style>
