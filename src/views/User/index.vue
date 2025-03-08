@@ -85,7 +85,7 @@
                 <el-row>
                     <el-col>
                         <el-card style="width: 100%;border: 5px;border-radius: 10px;" :body-style="{ padding: '15px' }"
-                            class="home-card">
+                            class="home-card" @click="backHomeHandler">
                             <div class="back-home">
                                 <div class="home-icon">
                                     <el-icon>
@@ -136,7 +136,11 @@
 <script lang="ts" setup>
 import { Iphone, Location, Message } from '@element-plus/icons-vue';
 import SkillItem from './SkillItem/index.vue';
-
+import { useRouter } from 'vue-router';
+const router=useRouter();
+const backHomeHandler=()=>{
+    router.push({path:'/index'});
+}
 </script>
 <style lang="scss" scoped>
 .user-content {
