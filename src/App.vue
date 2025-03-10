@@ -3,9 +3,7 @@
     <router-view />
   </div>
 </template>
-<script lang="ts" setup>
-
-</script>
+<script lang="ts" setup></script>
 <style lang="scss">
 .container {
   width: 100%;
